@@ -9,51 +9,51 @@ def load_library(emoticon_list)
     key_hash[name] = {}
     key_hash[name][:english] = emoticons_arr[0]
     key_hash[name][:japanese] = emoticons_arr[1]
-  end 
+  end
  key_hash
- end 
- 
- 
- 
- 
- 
- 
- 
+ end
+
+
+
+
+
+
+
  def get_japanese_emoticon(file_path, emoticon )
-   
+
 emoticons = load_library(file_path)
 
     emoticons.each do |key,value|
         value.each do |key2, value2|
           if emoticon == value2
             return value[:japanese]
-          end 
+          end
         end
-    end 
+    end
     return "Sorry, that emoticon was not found"
- end 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ end
+
+
+
+
+
+
+
+
+
+
+
+
 def get_english_meaning(file_path,emoticon)
-  
+
 emoticons = load_library(file_path)
 
     emoticons.each do |key,value|
         value.each do |key2, value2|
           if emoticon == value2
-            return key 
-          end 
+            return key
+          end
         end
-    end 
+    end
     return "Sorry, that emoticon was not found"
   end 
